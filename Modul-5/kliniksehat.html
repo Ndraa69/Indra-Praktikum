@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Registrasi Pasien - Klinik Sehat</title>
+    <link rel="stylesheet" href="style_klinik.css">
+</head>
+<body>
+
+    <h2>Formulir Pendaftaran Pasien Baru</h2>
+    <h3>Klinik Sehat</h3>
+
+    <form action="daftar_klinik.php" method="post">
+        
+        <div>
+            <label for="nama_pasien">Nama Pasien:</label>
+            <input type="text" id="nama_pasien" name="nama_pasien" placeholder="Masukkan nama lengkap pasien" required>
+        </div>
+
+        <div>
+            <label for="password_login">Password (untuk login pasien):</label>
+            <input type="password" id="password_login" name="password_login" required>
+        </div>
+
+        <div>
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="jk_laki" name="jenis_kelamin" value="Laki-laki">
+            <label for="jk_laki" class="radio-label">Laki-laki</label>
+            <input type="radio" id="jk_perempuan" name="jenis_kelamin" value="Perempuan">
+            <label for="jk_perempuan" class="radio-label">Perempuan</label>
+        </div>
+
+        <div>
+            <label>Keluhan Utama (Pilih yang sesuai):</label>
+            <input type="checkbox" id="keluhan_demam" name="keluhan[]" value="Demam">
+            <label for="keluhan_demam" class="checkbox-label">Demam</label><br>
+            <input type="checkbox" id="keluhan_batuk" name="keluhan[]" value="Batuk/Pilek">
+            <label for="keluhan_batuk" class="checkbox-label">Batuk/Pilek</label><br>
+            <input type="checkbox" id="keluhan_pusing" name="keluhan[]" value="Pusing">
+            <label for="keluhan_pusing" class="checkbox-label">Pusing</label>
+        </div>
+
+        <div>
+            <label for="pilih_poli">Pilih Poli Tujuan:</label>
+            <select id="pilih_poli" name="pilih_poli">
+                <option value="umum">Poli Umum</option>
+                <option value="gigi">Poli Gigi</option>
+                <option value="anak">Poli Anak</option>
+                <option value="kulit">Poli Kulit</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="riwayat_alergi">Riwayat Alergi Obat:</label>
+            <textarea id="riwayat_alergi" name="riwayat_alergi" rows="4" cols="50" placeholder="Kosongkan jika tidak ada"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Registrasi Pasien">
+        </div>
+
+    </form>
+
+</body>
+</html>

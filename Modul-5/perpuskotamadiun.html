@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pendaftaran Anggota - Perpustakaan Kota Madiun</title>
+    <link rel="stylesheet" href="style_perpus.css">
+</head>
+<body>
+
+    <h2>Formulir Pendaftaran Anggota Baru</h2>
+    <h3>Perpustakaan Kota Madiun</h3>
+
+    <form action="daftar_perpus.php" method="post">
+        
+        <div>
+            <label for="nama_lengkap">Nama Lengkap:</label>
+            <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div>
+            <label for="password_akun">Buat Password Akun:</label>
+            <input type="password" id="password_akun" name="password_akun" required>
+        </div>
+
+        <div>
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki">
+            <label for="laki_laki" class="radio-label">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+            <label for="perempuan" class="radio-label">Perempuan</label>
+        </div>
+
+        <div>
+            <label>Kategori Buku Favorit (Bisa pilih lebih dari 1):</label>
+            <input type="checkbox" id="hobi_fiksi" name="hobi[]" value="Fiksi">
+            <label for="hobi_fiksi" class="checkbox-label">Fiksi</label><br>
+            <input type="checkbox" id="hobi_sains" name="hobi[]" value="Sains">
+            <label for="hobi_sains" class="checkbox-label">Sains & Teknologi</label><br>
+            <input type="checkbox" id="hobi_sejarah" name="hobi[]" value="Sejarah">
+            <label for="hobi_sejarah" class="checkbox-label">Sejarah</label>
+        </div>
+
+        <div>
+            <label for="cabang_perpus">Pilih Cabang Perpustakaan:</label>
+            <select id="cabang_perpus" name="cabang_perpus">
+                <option value="pusat">Perpustakaan Pusat (Kota)</option>
+                <option value="Nglames">Perpustakaan Cabang Nglames </option>
+                <option value="jiwan">Perpustakaan Cabang Jiwan</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="alamat">Alamat Lengkap:</label>
+            <textarea id="alamat" name="alamat" rows="4" cols="50" placeholder="Tulis alamat Anda..."></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Daftar Sekarang">
+        </div>
+
+    </form>
+
+</body>
+</html>
